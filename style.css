@@ -20,7 +20,7 @@ body, html {
   border: 3px solid black;
   border-radius: 35px;
   background-color: rgba(26, 24, 24, 0.843);
-  	box-shadow: 5px 5px 12px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.5);
 }
 
 .screen {
