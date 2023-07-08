@@ -36,6 +36,3 @@ function operate(operator, num1, num2) {
     return null;
   }
 }
-
-let result = operate("*", 3, 3);
-console.log(result);

@@ -30,6 +30,18 @@ body, html {
   margin: 25px;
   border-radius: 15px;
   background-color: rgb(201, 201, 201);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.previous{
+  font-size: 35px;
+}
+
+.current{
+  font-size: 55px;
 }
 
 .button_grid button {
@@ -63,4 +75,8 @@ body, html {
 
 .footer{
   color: white;
+}
+
+.button_grid button:hover{
+  background-color: rgb(117, 126, 67);
 }
