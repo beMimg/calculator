@@ -13,16 +13,29 @@ function multiplyNumbers(num1, num2){
 function divideNumbers(num1, num2){
   return num1 / num2;
 }
- 
 
-let result1 = addNumbers(4, 4)
-console.log(result1);
+let num1 = 4;
+let operator = "+";
+let num2 = 5;
 
-let result2 = subNumbers(4, 4)
-console.log(result2);
+function operate(operator, num1, num2) {
+  if (operator === "+"){
+    return addNumbers(num1, num2);
+  
+  } else if (operator === "-"){
+    return subNumbers(num1, num2);
+  
+  } else if (operator === "*"){
+    return multiplyNumbers(num1, num2); 
+  
+  } else if (operator === "/"){
+    return divideNumbers(num1, num2);
+  
+  } else {
+    console.log("invalid operator");
+    return null;
+  }
+}
 
-let result3 = multiplyNumbers(4, 4)
-console.log(result3);
-
-let result4 = divideNumbers(4, 4)
-console.log(result4);
+let result = operate("*", 3, 3);
+console.log(result);
