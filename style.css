@@ -47,21 +47,37 @@ body, html {
 .button_grid button {
  height: 50px;
  width: 50px;
- border: 0.5px solid black;
+ border: 2px solid black;
  border-radius: 10%;
  margin: 10px;
 }
 
-.button_number {
-  background-color: #181e2f;
-  color: white;
-  font-size: 20px;
+.button_grid button:hover{
+  background-color: rgb(117, 126, 67);
 }
 
-.button_operator{
+.number {
+  background-color: #181e2f;
+  color: white;
+  font-size: 30px;
+}
+
+.operator{
   background-color: #328be43a;
   color: white;
   font-size: 30px;
+}
+
+.decimal{
+  font-size: 30px;
+  background-color: #328be43a;
+  color: white;
+}
+
+.equal{
+  font-size: 30px;
+  background-color: #328be43a;
+  color: white;
 }
 
 .first_row button{
@@ -75,8 +91,4 @@ body, html {
 
 .footer{
   color: white;
-}
-
-.button_grid button:hover{
-  background-color: rgb(117, 126, 67);
 }
