@@ -36,11 +36,12 @@ body, html {
   justify-content: space-around;
 }
 
-.previous{
+.previous_number{
   font-size: 35px;
+  font-weight: 250;
 }
 
-.current{
+.current_number{
   font-size: 55px;
 }
 
