@@ -14,6 +14,8 @@ decimalButton.addEventListener("click", () => {
 const equalButton = document.querySelector(".equal");
 equalButton.addEventListener('click', operate);
 
+window.addEventListener("keydown", keyPress);
+
 let currentNum = "";
 let operator = "+";
 let previousNum = "";
@@ -107,5 +109,27 @@ function addDecimal() {
   if (!currentNum.includes(".")){
     currentNum += ".";
     currentScreenNumber.textContent = currentNum; 
+  }
+}
+
+function keyPress(e) {
+  e.preventDefault()
+  if(e.key >= 0 && e.key <= 9){
+    handleNumber(e.key);
+  }
+  if(
+    e.key === "Enter" ||
+    (e.key === "=" && currentNum != "" && previousNum != "")
+  ) {
+    operate();
+  }
+  if (e.key === "+" || e.key === "-" || e.key === "/") {
+    handleOperator(e.key);
+  }
+  if (e.key === "*"){
+    handleOperator("*");
+  }
+  if (e.key === "."){
+    addDecimal();
   }
 }
