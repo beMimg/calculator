@@ -27,12 +27,25 @@ operatorButton.forEach(btn => {
   btn.addEventListener("click", () => handleOperator(btn.textContent));
 });
 
-function handleOperator(op){
-  operator = op;
-  previousNum = currentNum;
-  previousScreenNumber.textContent = previousNum + operator;
+function handleOperator(op) {
+  if (previousNum === "") {
+    previousNum = currentNum;
+    operatorCheck(op);
+  } else if (currentNum === "") {
+    operatorCheck(op);
+  } else {
+    operate();
+    operator = op;
+    currentScreenNumber.textContent = "0";
+    previousScreenNumber.textContent = previousNum + " " + operator;
+  }
+}
+
+function operatorCheck(text){
+  operator = text;
+  previousScreenNumber.textContent = previousNum + " " + operator;
+  currentScreenNumber.textContent = "0";
   currentNum = "";
-  currentScreenNumber = "";
 }
 
 function operate(){
@@ -58,7 +71,7 @@ function operate(){
 }
 
 function roundDecimals (num){
-  return Math.round(num * 100000) / 100000;
+  return Math.round(num * 100000) / 100000; 
 }
 
 function screenInput(){
