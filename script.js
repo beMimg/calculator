@@ -17,6 +17,10 @@ numberButton.forEach(btn => {
 });
 
 function handleNumber(number){
+    if(previousNum !== "" && currentNum !== "" && operator === ""){
+      previousNum = "";
+      currentScreenNumber.textContent = currentNum;
+    }
   if(currentNum.length <= 10){
   currentNum += number;
   currentScreenNumber.textContent = currentNum;
@@ -75,13 +79,14 @@ function roundDecimals (num){
 }
 
 function screenInput(){
-  previousScreenNumber.textContent = "";
-  operator = "";
   if(previousNum.length <= 10){
     currentScreenNumber.textContent = previousNum;
   } else {
     currentScreenNumber.textContent = previousNum.slice(0,10) + "...";
   }
+  previousScreenNumber.textContent = "";
+  operator = "";
+  currentNum = "";
 }
 
 function clearOperator(){
