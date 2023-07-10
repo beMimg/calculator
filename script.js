@@ -14,6 +14,9 @@ decimalButton.addEventListener("click", () => {
 const equalButton = document.querySelector(".equal");
 equalButton.addEventListener('click', operate);
 
+const deleteButton = document.querySelector("#delete");
+deleteButton.addEventListener("click", deleteNum);
+
 window.addEventListener("keydown", keyPress);
 
 let currentNum = "";
@@ -131,5 +134,21 @@ function keyPress(e) {
   }
   if (e.key === "."){
     addDecimal();
+  }
+  if (e.key === "Escape"){
+    clearOperator();
+  }
+  if (e.key === "Backspace"){
+    deleteNum();
+  }
+}
+
+function deleteNum() {
+  if (currentNum !== "") {
+    currentNum = currentNum.slice(0, -1);
+    currentScreenNumber.textContent = currentNum;
+    if (currentNum === "") {
+      currentScreenNumber.textContent = "0";
+    }
   }
 }
