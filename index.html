@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <title>Calculator</title>
-</head>
-<body>
-  
-  <div class="calculator">
-    
-    <div class="screen">
-      <div class="previous_number"></div>
-      <div class="current_number"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="screen">
+        <div class="previous_number"></div>
+        <div class="current_number"></div>
+      </div>
+
+      <div class="button_grid">
+        <div class="first_row">
+          <button id="clear" i class="fa-solid fa-trash"></i></button>
+          <button id="delete" i class="fa-solid fa-delete-left"></i></button>
+        </div>
+        <div class="row">
+          <button id="7" class="number">7</button>
+          <button id="8" class="number">8</button>
+          <button id="9" class="number">9</button>
+          <button id="+" class="operator">+</button>
+        </div>
+        <div class="row">
+          <button id="4" class="number">4</button>
+          <button id="5" class="number">5</button>
+          <button id="6" class="number">6</button>
+          <button id="-" class="operator">-</button>
+        </div>
+        <div class="row">
+          <button id="1" class="number">1</button>
+          <button id="2" class="number">2</button>
+          <button id="3" class="number">3</button>
+          <button id="*" class="operator">*</button>
+        </div>
+        <div class="row">
+          <button id="0" class="number">0</button>
+          <button id="." class="decimal">.</button>
+          <button id="/" class="operator">/</button>
+          <button id="operate_result" class="equal">=</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>built by bernyig</p>
+      </div>
     </div>
 
-
-    <div class="button_grid">
-      <div class="first_row">
-        <button id="clear" i class="fa-solid fa-trash"></i></button>
-        <button id="delete" i class="fa-solid fa-delete-left"></i></button>
-      </div>
-      <div class="row">
-        <button id="7" class="number">7</button>
-        <button id="8" class="number">8</button>
-        <button id="9" class="number">9</button>
-        <button id="+" class="operator">+</button>
-      </div>  
-      <div class="row">
-        <button id="4" class="number">4</button>
-        <button id="5" class="number">5</button>
-        <button id="6" class="number">6</button>
-        <button id="-" class="operator">-</button>
-      </div>  
-      <div class="row">
-      <button id="1" class="number">1</button>
-      <button id="2" class="number">2</button>
-      <button id="3" class="number">3</button>
-      <button id="*" class="operator">*</button>
-      </div>
-      <div class="row">
-      <button id="0" class="number">0</button>
-      <button id="." class="decimal">.</button>
-      <button id="/" class="operator">/</button>
-      <button id="operate_result" class="equal">=</button>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p>built by bernyig</p>
-    </div>
-  </div>
-  
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
