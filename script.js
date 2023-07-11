@@ -4,15 +4,15 @@ const numberButton = document.querySelectorAll(".number");
 const operatorButton = document.querySelectorAll(".operator");
 
 const clearButton = document.querySelector("#clear");
-clearButton.addEventListener('click', clearOperator);
+clearButton.addEventListener("click", clearOperator);
 
-const decimalButton = document.querySelector('.decimal');
+const decimalButton = document.querySelector(".decimal");
 decimalButton.addEventListener("click", () => {
   addDecimal();
-})
+});
 
 const equalButton = document.querySelector(".equal");
-equalButton.addEventListener('click', operate);
+equalButton.addEventListener("click", operate);
 
 const deleteButton = document.querySelector("#delete");
 deleteButton.addEventListener("click", deleteNum);
@@ -23,22 +23,22 @@ let currentNum = "";
 let operator = "+";
 let previousNum = "";
 
-numberButton.forEach(btn => {
+numberButton.forEach((btn) => {
   btn.addEventListener("click", () => handleNumber(btn.textContent));
 });
 
 function handleNumber(number) {
-    if (previousNum !== "" && currentNum !== "" && operator === "") {
-      previousNum = "";
-      currentScreenNumber.textContent = currentNum;
-    }
+  if (previousNum !== "" && currentNum !== "" && operator === "") {
+    previousNum = "";
+    currentScreenNumber.textContent = currentNum;
+  }
   if (currentNum.length <= 10) {
-  currentNum += number;
-  currentScreenNumber.textContent = currentNum;
-  }  
+    currentNum += number;
+    currentScreenNumber.textContent = currentNum;
+  }
 }
 
-operatorButton.forEach(btn => {
+operatorButton.forEach((btn) => {
   btn.addEventListener("click", () => handleOperator(btn.textContent));
 });
 
@@ -74,7 +74,7 @@ function operate() {
   } else if (operator === "*") {
     previousNum = previousNum * currentNum;
   } else if (operator === "/") {
-    if (currentNum < 0){
+    if (currentNum < 0) {
       currentNum = "error";
       screenInput();
       return;
@@ -85,15 +85,15 @@ function operate() {
   screenInput();
 }
 
-function roundDecimals (num) {
-  return Math.round(num * 100000) / 100000; 
+function roundDecimals(num) {
+  return Math.round(num * 100000) / 100000;
 }
 
 function screenInput() {
-  if(previousNum.length <= 10) {
+  if (previousNum.length <= 10) {
     currentScreenNumber.textContent = previousNum;
   } else {
-    currentScreenNumber.textContent = previousNum.slice(0,10) + "...";
+    currentScreenNumber.textContent = previousNum.slice(0, 10) + "...";
   }
   previousScreenNumber.textContent = "";
   operator = "";
@@ -109,18 +109,18 @@ function clearOperator() {
 }
 
 function addDecimal() {
-  if (!currentNum.includes(".")){
+  if (!currentNum.includes(".")) {
     currentNum += ".";
-    currentScreenNumber.textContent = currentNum; 
+    currentScreenNumber.textContent = currentNum;
   }
 }
 
 function keyPress(e) {
-  e.preventDefault()
-  if(e.key >= 0 && e.key <= 9){
+  e.preventDefault();
+  if (e.key >= 0 && e.key <= 9) {
     handleNumber(e.key);
   }
-  if(
+  if (
     e.key === "Enter" ||
     (e.key === "=" && currentNum != "" && previousNum != "")
   ) {
@@ -129,16 +129,16 @@ function keyPress(e) {
   if (e.key === "+" || e.key === "-" || e.key === "/") {
     handleOperator(e.key);
   }
-  if (e.key === "*"){
+  if (e.key === "*") {
     handleOperator("*");
   }
-  if (e.key === "."){
+  if (e.key === ".") {
     addDecimal();
   }
-  if (e.key === "Escape"){
+  if (e.key === "Escape") {
     clearOperator();
   }
-  if (e.key === "Backspace"){
+  if (e.key === "Backspace") {
     deleteNum();
   }
 }

@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,8 +7,9 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: rgb(201, 201, 201);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #b5c6f5;
 }
 
 .calculator {
@@ -17,10 +19,10 @@ body, html {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 35px;
-  background-color: rgba(26, 24, 24, 0.843);
-  box-shadow: 5px 5px 12px rgba(0,0,0,0.5);
+  background-color: rgb(26, 24, 24);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
 }
 
 .screen {
@@ -29,67 +31,101 @@ body, html {
   width: 350px;
   margin: 25px;
   border-radius: 15px;
-  background-color: rgb(201, 201, 201);
+  background-color: rgba(201, 201, 201, 0.722);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-around;
+  padding: 5px;
 }
 
-.previous_number{
+.previous_number {
   font-size: 35px;
   font-weight: 250;
 }
 
-.current_number{
+.current_number {
   font-size: 55px;
 }
 
 .button_grid button {
- height: 50px;
- width: 50px;
- border: 2px solid black;
- border-radius: 10%;
- margin: 10px;
-}
-
-.button_grid button:hover{
-  background-color: rgb(117, 126, 67);
+  height: 60px;
+  width: 80px;
+  border: none;
+  border-radius: 10%;
+  margin: 5px;
+  transition: transform 0.2s;
 }
 
 .number {
-  background-color: #181e2f;
+  background-color: #3263ea;
   color: white;
   font-size: 30px;
 }
 
-.operator{
+.number:hover {
+  color: #181e2f;
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.operator {
   background-color: #328be43a;
   color: white;
   font-size: 30px;
 }
 
-.decimal{
+.operator:hover {
+  color: #181e2f;
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.decimal {
+  font-size: 30px;
+  background-color: #328be43a;
+  color: white;
+}
+.decimal:hover {
+  color: #181e2f;
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.equal {
   font-size: 30px;
   background-color: #328be43a;
   color: white;
 }
 
-.equal{
-  font-size: 30px;
-  background-color: #328be43a;
-  color: white;
+.equal:hover {
+  color: #181e2f;
+  background-color: white;
+  transform: scale(1.1);
 }
 
-.first_row button{
-  width: 122.5px;
-  background-color: rgb(154, 36, 36);
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
+.first_row {
   margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer{
+.first_row button {
+  width: 175px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.342);
+  color: white;
+  font-size: 40px;
+}
+
+.first_row button:hover {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.856);
+  transform: scale(1.1);
+}
+
+.footer {
   color: white;
 }
