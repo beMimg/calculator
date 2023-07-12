@@ -27,6 +27,7 @@ body {
   );
   background: linear-gradient(135deg, #0099a4 0%, #2a73cb 47%, #0b2275 100%);
 }
+
 .calculator {
   height: 600px;
   width: 400px;
