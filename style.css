@@ -9,9 +9,24 @@ html {
   height: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #b5c6f5;
 }
 
+body {
+  background: #0099a4;
+  background: -moz-linear-gradient(
+    -45deg,
+    #0099a4 0%,
+    #2a73cb 47%,
+    #0b2275 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #0099a4 0%,
+    #2a73cb 47%,
+    #0b2275 100%
+  );
+  background: linear-gradient(135deg, #0099a4 0%, #2a73cb 47%, #0b2275 100%);
+}
 .calculator {
   height: 600px;
   width: 400px;
