@@ -1,4 +1,4 @@
-# calculator
+# Calculator
 Calculator Project 
 
 ![Screenshot from 2023-09-05 23-10-03](https://github.com/beMimg/calculator/assets/126000960/d5815d5c-cdcf-419e-a101-4f32929e801a)
