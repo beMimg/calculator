@@ -1,7 +1,8 @@
 # Calculator
 Calculator Project 
 
-![Screenshot from 2023-09-05 23-10-03](https://github.com/beMimg/calculator/assets/126000960/d5815d5c-cdcf-419e-a101-4f32929e801a)
+![Screenshot from 2023-09-05 23-12-05](https://github.com/beMimg/calculator/assets/126000960/0788257a-99ce-4125-af7a-e0098a03d4c0)
+
 
 This is a simple web-based calculator project implemented using HTML, CSS, and JavaScript. You can check out the live preview here.
 
